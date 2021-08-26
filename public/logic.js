@@ -1,22 +1,17 @@
 async function saveTodo() {
-    const task = document.getElementById("inputTask").value
-    const status = await makeRequest("http://localhost:5000/api/todo", "POST", { todo: task })
-    console.log(status)
-    fetch('https://jsonplaceholder.typicode.com/photos')
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-    await getAndPrintTodos()
+    let response = await fetch("https://catfact.ninja/fact?max_length=140")
+    console.log(response)
+    let result = await response.json()
+    console.log(result.fact)
+    const printFact = document.getElementById("printedFact")
+    printFact.innerText = result.fact
+
 }
 
+
 async function getAndPrintTodos() {
-    const todos = await makeRequest("http://localhost:5000/api/todo", "GET")
+    const todos = await makeRequest("http://localhost:5000/api/catFacts", "GET")
     console.log(todos)
-
-
-    // rendera ut 
-    for (let i = 0; i < todos.length; i++) {
-        const printedTodo = document.getElementById("printedTodo").value
-    }
 
 }
 

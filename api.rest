@@ -1,10 +1,8 @@
-GET http://localhost:5000/api/todo
+GET http://localhost:5000/api/catFacts
 
 ##
 
-POST http://localhost:5000/api/todo
+POST http://localhost:5000/api/catFacts
 Content-Typ: application/json
 
-{
-    todo: task
-}
+

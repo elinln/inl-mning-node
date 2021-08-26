@@ -4,9 +4,9 @@ const port = 5000
 const path = require('path')
 server.use(express.json());
 
-let todos = []
+let factsForCats = []
 
-server.get('/api/todo', (req, res) => {
+server.get('/api/catFacts', (req, res) => {
 
     try {
         res.json(todos)
@@ -15,7 +15,7 @@ server.get('/api/todo', (req, res) => {
     }
 })
 
-server.post('/api/todo', (req, res) => {
+server.post('/api/catFacts', (req, res) => {
     console.log(req.body)
 
     try {
