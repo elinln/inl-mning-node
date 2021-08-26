@@ -1,0 +1,31 @@
+body {
+    background-color: lavenderblush;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+input {
+    width: 300px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border: solid 1px lightgray;
+    color: gray;
+}
+
+button {
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 50px;
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    border: solid 1px lightgray;
+    color: gray;
+    width: auto;
+}

@@ -1,0 +1,10 @@
+GET http://localhost:5000/api/todo
+
+##
+
+POST http://localhost:5000/api/todo
+Content-Typ: application/json
+
+{
+    todo: task
+}
