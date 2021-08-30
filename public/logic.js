@@ -1,4 +1,11 @@
-async function saveTodo() {
+window.addEventListener("load", async () => {
+    updateCatName(await makeRequest(`/api/catFacts`, "GET"))
+
+})
+
+
+// Get random cat-fact from external API
+async function getCatFact() {
     let response = await fetch("https://catfact.ninja/fact?max_length=140")
     console.log(response)
     let result = await response.json()
@@ -8,14 +15,24 @@ async function saveTodo() {
 
 }
 
-
-async function getAndPrintTodos() {
-    const todos = await makeRequest("http://localhost:5000/api/catFacts", "GET")
-    console.log(todos)
-
+// Saves cat name to API from the input field
+async function addCatName() {
+    let catName = document.getElementById("inputName").value
+    console.log(catName)
+    updateCatName(await makeRequest("/api/catFacts", "POST", { catName }))
 }
 
+// Updates the cats name
+function updateCatName(catNames) {
+    let findCatName = document.getElementById("catName")
+    findCatName.innerHTML = catNames.map(c => c.catName).join('<br>')
+}
 
+// Deletes (kills) the cat
+async function killCat() {
+    let catName = document.getElementById("inputName").value
+    updateCatName(await makeRequest(`/api/catFacts/${catName}`, "DELETE"))
+}
 
 
 async function makeRequest(url, method, body) {

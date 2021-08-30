@@ -12,10 +12,18 @@
 
 <body>
     <h1>Random Cat Facts API</h1>
-    <button onClick="saveTodo()">Press to get a random cat fact!</button>
+    <button onClick="getCatFact()">Press to get a random cat fact!</button>
     <h2 id="printedFact"></h2>
-    <input type="text" id="inputFact" placeholder="Add your own funny cat fact...">
-    <h3 id="writtenFact"></h3>
+    <input type="text" id="inputName" placeholder="Add a good name for a cat...">
+    <button onClick="addCatName()" id="addCatName">Press to add!</button>
+    <h4>Some good names for cats are:</h4>
+    <h3 id="writtenName">
+        <ul id="catName">
+
+        </ul>
+    </h3>
+
+    <button onClick="killCat()">Kill the cat!</button>
 
 </body>
 

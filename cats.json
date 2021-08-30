@@ -1,10 +1,1 @@
-[
-    {
-        "id": 1,
-        "catFact": ""
-    },
-    {
-        "id": 2,
-        "catFact": ""
-    }
-]
+[{"catName":"Mittens"},{"catName":"hejsan"},{"catName":"hej"},{"catName":"tja"},{"catName":"bar"},{"catName":"hejjjj"}]
