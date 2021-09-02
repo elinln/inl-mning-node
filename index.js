@@ -26,13 +26,14 @@ server.post('/api/catFacts', (req, res) => {
             console.log(catNames)
             fs.writeFileSync("cats.json", JSON.stringify(catNames))
         }
-        res.json(catNames)
+        res.json(true)
 
     } catch (err) {
         res.json({ status: "Something went wrong when saving..." })
     }
 })
 
+// Does nothing atm
 server.put('/api/catFacts', (req, res) => {
     try {
         let raw = fs.readFileSync("cats.json")
@@ -46,7 +47,7 @@ server.put('/api/catFacts', (req, res) => {
             console.log(catNames)
             fs.writeFileSync("cats.json", JSON.stringify(catNames))
         }
-        res.json(catNames)
+        res.json(true)
 
     } catch (err) {
         res.json({ status: "Something went wrong when saving..." })

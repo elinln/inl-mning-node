@@ -19,13 +19,16 @@ async function getCatFact() {
 async function addCatName() {
     let catName = document.getElementById("inputName").value
     console.log(catName)
-    updateCatName(await makeRequest("/api/catFacts", "POST", { catName }))
+    const status = await makeRequest("/api/catFacts", "POST", { catName })
+    updateCatName(await makeRequest(`/api/catFacts`, "GET"))
+
 }
 
-// Updates the cats name
+// Prints the cats name
 function updateCatName(catNames) {
     let findCatName = document.getElementById("catName")
     findCatName.innerHTML = catNames.map(c => c.catName).join('<br>')
+    console.log(catNames)
 }
 
 // Deletes (kills) the cat

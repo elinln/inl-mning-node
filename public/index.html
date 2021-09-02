@@ -8,22 +8,33 @@
     <title>API</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./logic.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Permanent+Marker&family=Rampart+One&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <h1>Random Cat Facts API</h1>
+    <h1>✨🐱 Random Cat Facts API 🐱✨</h1>
     <button onClick="getCatFact()">Press to get a random cat fact!</button>
     <h2 id="printedFact"></h2>
-    <input type="text" id="inputName" placeholder="Add a good name for a cat...">
-    <button onClick="addCatName()" id="addCatName">Press to add!</button>
+    <input type="text" id="inputName" placeholder="Add a good name for a cat or kill a existing cat...">
+
+    <div class="buttons">
+        <button onClick="addCatName()" id="addCatName">Press to add!</button>
+        <button onClick="killCat()" id="deleteCatName">Kill the cat!</button>
+    </div>
+
     <h4>Some good names for cats are:</h4>
     <h3 id="writtenName">
         <ul id="catName">
-
         </ul>
     </h3>
 
-    <button onClick="killCat()">Kill the cat!</button>
 
 </body>
 
