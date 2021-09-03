@@ -5,7 +5,7 @@ const port = 5000
 const path = require('path')
 server.use(express.json());
 
-
+// GET REQUEST
 server.get('/api/catFacts', (req, res) => {
 
     try {
@@ -15,6 +15,7 @@ server.get('/api/catFacts', (req, res) => {
     }
 })
 
+// POST REQUEST
 server.post('/api/catFacts', (req, res) => {
 
     try {
@@ -33,28 +34,8 @@ server.post('/api/catFacts', (req, res) => {
     }
 })
 
-// Does nothing atm
-server.put('/api/catFacts', (req, res) => {
-    try {
-        let raw = fs.readFileSync("cats.json")
-        let catNames = JSON.parse(raw)
-        let cat = catNames.some(c => c.catName === req.body.catName)
-        if (req.body && req.body.catName && cat) {
 
-            catNames = catNames.filter(c => c.catName != req.params.catName)
-            catNames.push({ ...cat, ...req.body })
-
-            console.log(catNames)
-            fs.writeFileSync("cats.json", JSON.stringify(catNames))
-        }
-        res.json(true)
-
-    } catch (err) {
-        res.json({ status: "Something went wrong when saving..." })
-    }
-})
-
-
+// DELETE REQUEST
 server.delete('/api/catFacts/:catName', (req, res) => {
 
     try {
@@ -67,6 +48,7 @@ server.delete('/api/catFacts/:catName', (req, res) => {
     }
 })
 
+// Returns cats from json-file
 function getCats() {
     try {
         return JSON.parse(fs.readFileSync("cats.json"))

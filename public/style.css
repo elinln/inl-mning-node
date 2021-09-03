@@ -12,17 +12,21 @@ body {
 }
 
 input {
-    width: 390px;
+    width: 480px;
     border-radius: 20px;
     height: 50px;
     background-color: white;
-    font-size: 15px;
+    font-size: 18px;
     border: solid 2px rgba(88, 73, 65, 0.678);
     color: rgba(88, 73, 65, 0.89);
     font-family: 'Crete Round', serif;
     font-family: 'Permanent Marker', cursive;
     font-family: 'Rampart One', cursive;
     padding: 5px;
+}
+
+#randomButton {
+    font-size: 20px;
 }
 
 button {
@@ -36,14 +40,16 @@ button {
     font-family: 'Crete Round', serif;
     font-family: 'Permanent Marker', cursive;
     font-family: 'Rampart One', cursive;
-
+    font-size: 17px;
+    margin-right: 55px;
+    margin-left: 55px;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
- }
+}
 
 #addCatName {
     border: rgba(0, 128, 0, 0.281) solid 2px;
@@ -57,6 +63,7 @@ button {
 ul {
     margin: 0;
     padding: 0;
+    margin-bottom: 50px;
     font-family: 'Crete Round', serif;
     font-family: 'Permanent Marker', cursive;
     font-family: 'Rampart One', cursive;
@@ -64,5 +71,13 @@ ul {
 
 h1 {
     font-size: 50px;
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    font-size: 20px;
 }
 

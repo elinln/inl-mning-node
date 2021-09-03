@@ -1,6 +1,5 @@
 window.addEventListener("load", async () => {
     updateCatName(await makeRequest(`/api/catFacts`, "GET"))
-
 })
 
 

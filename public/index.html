@@ -10,17 +10,12 @@
     <script src="./logic.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Permanent+Marker&family=Rampart+One&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>✨🐱 Random Cat Facts API 🐱✨</h1>
-    <button onClick="getCatFact()">Press to get a random cat fact!</button>
+    <button onClick="getCatFact()" id="randomButton">Press to get a random cat fact!</button>
     <h2 id="printedFact"></h2>
     <input type="text" id="inputName" placeholder="Add a good name for a cat or kill a existing cat...">
 
